@@ -1,7 +1,7 @@
 // Global variables
 var resultParagraph = document.getElementById("result");
 var random;
-var range = 100;
+var range = 6661000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 var nextRandom = Math.floor(Math.random() * range + 1);
 
 
@@ -16,13 +16,31 @@ function generateRandom() {
 
 // Function for the higher button
 function higher() {
-   
+    if ( nextRandom > random) {
+        window.alert("✔Correct!");
+      }
+      else if (nextRandom < random) {
+        window.alert("❌HAHAHAHA, you'er wrong!");
+      }
+      else {
+        window.alert("🍀A coincidence happened! Lucky!");
+      }
+      generateRandom()
 }
 
 // Function for the lower button
 function lower() {
-   
+    if (nextRandom < random) {
+        window.alert("✔Correct!");
+      }
+      else if (nextRandom > random ) {
+        window.alert("❌HAHAHAHA, you'er wrong!");
+      }
+      else {
+        window.alert("🍀A coincidence happened! Lucky!");
+      }
+      generateRandom()
 }
 
 //Generate a number to start the game!
-generateRandom();
+generateRandom(67);
